@@ -128,8 +128,9 @@ class DeliverableTests(unittest.TestCase):
             self.assertGreater(path.stat().st_size, 1024, f"Empty visualization: {name}")
         html = (VIZ_DIR / "sf_food_safety_map.html").read_text(encoding="utf-8")
         self.assertIn("leaflet", html.lower())
-        self.assertIn("basemaps.cartocdn.com", html)
+        self.assertIn("server.arcgisonline.com", html)
         self.assertNotIn("tile.openstreetmap.org", html)
+        self.assertNotIn("basemaps.cartocdn.com", html)
 
 
 if __name__ == "__main__":
