@@ -1,4 +1,5 @@
-# Python bytecode, virtual environments & caches
+# Local notes, scratchpads & environments
+.local/
 __pycache__/
 *.py[cod]
 *$py.class
